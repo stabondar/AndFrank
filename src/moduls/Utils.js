@@ -7,7 +7,6 @@ export default class Utils
 {
     constructor()
     {
-        gsap.set($('main'), {autoAlpha: 1})
         $('img').removeAttr('srcset')
         
         // Add class when page on top

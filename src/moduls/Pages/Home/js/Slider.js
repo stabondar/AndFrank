@@ -1,3 +1,4 @@
+import gsap from 'gsap'
 import Swiper from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -48,6 +49,8 @@ export default class Slider
         })
 
         this.autoProgress()
+
+        gsap.set($('main'), {autoAlpha: 1})
     }
 
     addBars()
