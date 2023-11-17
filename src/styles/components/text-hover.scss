@@ -1,0 +1,28 @@
+.text-link,
+a.footer__item
+{
+    position: relative;
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: transform var(--ease);
+        transform: scaleX(0);
+        transform-origin: right;
+        height: 1px;
+        background-color: currentColor;
+    }
+
+    &:hover
+    {
+        &::before
+        {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}
