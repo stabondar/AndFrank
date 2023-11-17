@@ -2,6 +2,8 @@ import barba from '@barba/core'
 import barbaPrefetch from '@barba/prefetch'
 
 import Scroll from './moduls/Scroll.js'
+import Nav from './moduls/Nav.js'
+import Footer from './moduls/Components/Footer.js'
 
 let instance = null
 
@@ -12,24 +14,40 @@ export default class App {
         instance = this
 
         this.scroll = new Scroll()
-        let lenis = this.scroll.lenis
+        this.lenis = this.scroll.lenis
 
-        this.utils = null
+        /*
+        *   once Load
+        */
+        this.nav = new Nav()
+        this.footer = new Footer()
 
-        const checkPages = async () =>
-        {   
+        /*
+        *   modules for pages
+        */
+
+       const namespace = 'barba-page'
+       
+       const checkPages = async () =>
+       {   
+            this.lenis.scrollTo(1, {force: true})
+            const main = $('main')
+
+            this.title = await import('./moduls/Title.js').then(module => new module.default)
             this.utils = await import('./moduls/Utils.js').then(module => new module.default)
-
-            // if(main.attr('data-barba-namespace') == 'home')
-            // {
-            //     this.home = await import('./moduls/Pages/Home/Home.js').then(module => new module.default)
-            // }
+            this.batch = await import('./moduls/Components/Batch.js').then(module => new module.default)
+            if(main.attr(namespace) == 'home') this.page = await import('./moduls/Pages/Home/index.js').then(module => new module.default)
         }
 
         barba.use(barbaPrefetch)
 
         barba.init(
         {
+            schema: 
+            {
+                prefix: 'barba',
+                namespace: 'page'
+            },
             debug: true,
             timeout: 7000,
             transitions: 
@@ -37,8 +55,9 @@ export default class App {
                 // Once Opening
                 {
                     name: 'once',
-                    async once (data)
+                    once (data)
                     {
+                        checkPages()
                         // const forms = new Forms()
                         // const pageAnimation = async () =>
                         // {
@@ -81,18 +100,11 @@ export default class App {
                 }
             ]
         })
-
-        barba.hooks.once((data) =>
-        {
-            lenis.scrollTo(0, {offset: 0})
-        })
         
         barba.hooks.after(async (data) =>
         {
             const restart = await import('@finsweet/ts-utils')
             restart.restartWebflow()
-
-            checkPages()
         })
 
         barba.hooks.enter( (data) =>

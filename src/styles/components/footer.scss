@@ -1,0 +1,60 @@
+.footer__logo--names
+{
+    width: var(--width);
+    position: relative;
+    transition: width var(--ease);
+    height: 100%;
+}
+
+.footer__logo--name
+{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: opacity var(--ease);
+    
+    &.active
+    {
+        transition: opacity var(--ease) 0.2s;
+        opacity: 1;
+    }
+}
+
+footer
+{
+    --color: #000;
+    --background: #fff;
+
+    &[theme="blue"]
+    {
+        --color: var(--light-blue);
+        --background: var(--dark-blue);
+    }
+
+    color: var(--color);
+    background-color: var(--background);
+}
+
+.footer__divider
+{
+    background-color: currentColor;
+}
+
+.footer__logo--name-space
+{
+    border-color: var(--color);
+}
+
+.footer__logo
+{   
+    path
+    {
+        fill: var(--background);
+
+        &.logo-bg
+        {
+            fill: var(--color);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.hero__bot
+{
+    transition: background-color var(--ease);
+}
+
+.hero__bot--item
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--ease);
+
+    &:first-child
+    {
+        position: relative;
+        width: auto;
+    }
+
+    &.active
+    {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.hero__progress
+{
+    z-index: 2;
+}
+
+.hero__progress--bar
+{
+    width: calc(90 / var(--to-rem));
+    height: 2px;
+    background-color: rgba(0, 0, 0, .2);
+    transition: width var(--custom-ease);
+    position: relative;
+    border-radius: 100vw;
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 100vw;
+        background-color: var(--black);
+        width: calc(100% - (100% * var(--progress)));
+    }
+
+    &.active
+    {
+        width: 100%;
+    }
+
+    &:not(.active)
+    {
+        --progress: 1 !important;
+    }
+}

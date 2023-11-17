@@ -1,0 +1,9 @@
+.numbers__video
+{
+    overflow: hidden;
+
+    & > div
+    {
+        scale: 2.5;
+    }
+}

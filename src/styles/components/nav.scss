@@ -1,0 +1,94 @@
+.nav
+{
+    background-color: var(--white);
+}
+
+.nav__drop--parent
+{
+    display: block;
+    position: relative;
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--light-blue);
+        transform-origin: left;
+        transition: transform var(--ease);
+        transform: scaleX(0);
+        z-index: 1;
+    }
+
+    &.open  
+    {
+        &::before
+        {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.nav__drop
+{
+    --pixel-height: 100;
+    --index: 1;
+
+    height: calc((var(--pixel-height) - (var(--pixel-height) * var(--index))) / var(--to-rem));
+    transition: height var(--ease);
+    position: relative;
+    overflow: hidden;
+
+    &.active
+    {
+        --index: 0;
+
+        .nav__drop--link,
+        .nav__drop--socials,
+        .btn
+        {
+            opacity: 1;
+            transition: opacity var(--ease) var(--delay);
+        }
+    }
+}
+
+.nav__drop--link, 
+.nav__drop--socials,
+.nav__drop .btn
+{
+    opacity: 0;
+    transition: opacity 0.2s ease 0s;
+}
+
+.nav__tab
+{
+    position: relative;
+    cursor: pointer;
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transform-origin: right;
+        transition: transform var(--ease);
+        transform: scaleX(0);
+    }
+
+    &.active
+    {
+        &::before
+        {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}

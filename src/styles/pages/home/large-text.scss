@@ -1,0 +1,27 @@
+.large-text
+{
+    --font: 600;
+    height: 250vh;
+    position: relative;
+    margin-bottom: calc(-50vh - var(--height));
+
+    ._70
+    {
+        font-size: calc(var(--font) / var(--to-rem));
+        flex: none;
+    }
+}
+
+.large-text__sticky
+{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    vertical-align: middle;
+}
+
+.large-text__item
+{
+    width: 100%;
+}

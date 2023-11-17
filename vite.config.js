@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 
 // vite.config.js
 export default defineConfig({
-  base: 'https://domain.com/',
+  base: 'https://and-frank.vercel.app/',
   plugins: [
     eslintPlugin(), 
     glsl()],

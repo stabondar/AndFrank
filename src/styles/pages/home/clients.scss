@@ -1,0 +1,39 @@
+.clients__list
+{
+    justify-content: flex-start;
+}
+
+.clients__item--parent
+{
+    --padding: 90;
+    width: calc((446 + var(--padding) * 2) / var(--to-rem));
+    padding: 0 calc(var(--padding) / var(--to-rem));
+
+    &.swiper-slide-active
+    {
+        .clients__item
+        {
+            scale: 1;
+            filter: blur(0);
+        }
+    }
+}
+
+.clients__item
+{
+    height: calc(513 / var(--to-rem));
+    transition: scale var(--ease), filter var(--ease);
+    scale: 0.85;
+    filter: blur(4px);
+}
+
+.clients__arrow
+{
+    transition: scale var(--ease);
+    cursor: pointer;
+
+    &:hover
+    {
+        scale: 1.2;
+    }
+}

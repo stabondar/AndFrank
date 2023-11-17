@@ -33,6 +33,7 @@
     "fontfaceobserver": "^2.3.0",
     "gsap": "file:gsap-bonus.tgz",
     "jquery-validation": "^1.19.5",
+    "swiper": "^11.0.4",
     "vercel": "^31.2.3"
   }
 }

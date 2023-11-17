@@ -8,6 +8,7 @@ export default class Utils
     constructor()
     {
         gsap.set($('main'), {autoAlpha: 1})
+        $('img').removeAttr('srcset')
         
         // Add class when page on top
         $('body').addClass('at-top')
@@ -21,5 +22,16 @@ export default class Utils
         // get year
         let year = $('.year')
         year.text(new Date().getFullYear())
+
+        let vh = window.innerHeight
+        $('html').css('--vh', `${vh}`)
+
+        window.addEventListener('resize', () => 
+        {
+            if(window.innerWidth < 479) return
+
+            vh = window.innerHeight
+            $('html').css('--vh', `${vh}`)
+        })
     }
 }

@@ -20,17 +20,15 @@ export default class Title
         const lineAnimation = () =>
         {
             let item = $('[text-line]')
-            splitLine = new SplitText(item, {type: 'lines, chars'})
+            splitLine = new SplitText(item, {type: 'lines'})
 
             $(item).each(function()
             {
                 let self = $(this)
                 let lines = self.find(splitLine.lines)
-                let chars = self.find(splitLine.chars)
-                let parent = self.parent()
                 let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power3', stagger: 0.06}})
 
-                tl.fromTo(chars, {opacity: 0}, {opacity: 1, stagger: 0.1})
+                tl.fromTo(lines, {opacity: 0}, {opacity: 1, stagger: 0.1})
 
                 ScrollTrigger.create({
                     trigger: self,
@@ -46,7 +44,7 @@ export default class Title
             })
         }
         
-        let titleFont = new FontFaceObserver('FontNAme')
+        let titleFont = new FontFaceObserver('PP Editorial New')
         titleFont.load().then(function () 
         {
             lineAnimation()
