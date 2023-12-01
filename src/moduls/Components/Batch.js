@@ -13,7 +13,7 @@ export default class Batch
         {
             start: 'top 85%',
             interval: 0.2,
-            onEnter: batch => { gsap.to(batch, {opacity: 1, stagger: 0.1, duration: 0.6, ease: 'power1', }) }
+            onEnter: batch => { gsap.to(batch, {opacity: 1, stagger: 0.1, duration: 0.6, ease: 'power1', onStart: () => $(batch).addClass('animating'), }) }
         })
-    }
+    } 
 }

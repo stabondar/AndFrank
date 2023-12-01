@@ -1,0 +1,133 @@
+.services__item
+{
+    position: relative;
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition: transform var(--ease);
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    &:last-child
+    {
+        &::after
+        {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: currentColor;
+            transition: transform var(--ease) 0.1s;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+    }
+
+    &.animating
+    {
+        &::before,
+        &::after
+        {
+            transform: scaleX(1);
+        }
+    }
+
+    &.active
+    {
+        .services__bot
+        {
+            grid-template-rows: 1fr;
+        }
+
+        .services__icon
+        {
+            transform: rotate(-90deg);
+        }
+
+        ._70
+        {
+            &.italic
+            {
+                .char
+                {
+                    opacity: 1;
+                    transition: opacity var(--ease) calc(var(--delay) + 0.1s);
+                }
+            }
+
+            .char
+            {
+                opacity: 0;
+                transition: opacity var(--ease) var(--delay);
+            }
+        }
+    }
+}
+
+.services__top--title
+{
+    transition: color var(--ease);
+
+    ._70
+    {
+        &.italic
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(10%);
+
+            .char
+            {
+                opacity: 0;
+                transition: opacity var(--ease) 0s;
+            }
+        }
+
+        .char
+        {
+            transition: opacity var(--ease) 0.1s;
+        }
+    }
+}
+
+.services__top
+{
+    cursor: pointer;
+
+    &:hover
+    {
+        .services__top--title
+        {
+            color: var(--dark);
+        }
+    }
+}
+
+.services__icon
+{
+    transition: transform var(--ease);
+}
+
+.services__bot
+{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--ease);
+}
+
+.services__inner--item
+{
+    color: var(--dark);
+    border-color: var(--light);
+}

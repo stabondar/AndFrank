@@ -1,6 +1,31 @@
 .nav
 {
     background-color: var(--white);
+
+    .container
+    {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.hovered
+    {
+        .nav__overlay
+        {
+            opacity: 1;
+        }
+    }
+}
+
+.nav__overlay
+{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--ease);
+    display: block;
+    filter: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav__drop--parent
@@ -84,6 +109,15 @@
     }
 
     &.active
+    {
+        &::before
+        {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+
+    &.w--current
     {
         &::before
         {

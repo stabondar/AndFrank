@@ -20,6 +20,7 @@ export default class Nav
 
             self.on('mouseenter', () =>
             {
+                this.nav.addClass('hovered')
                 this.dropItem.removeClass('active')
                 this.items.removeClass('active')
 
@@ -34,6 +35,7 @@ export default class Nav
             this.dropParent.removeClass('open')
             this.dropItem.removeClass('active')
             this.items.removeClass('active')
+            this.nav.removeClass('hovered')
         })
     }
 

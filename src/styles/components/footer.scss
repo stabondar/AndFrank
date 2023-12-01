@@ -23,17 +23,8 @@
 
 footer
 {
-    --color: #000;
-    --background: #fff;
-
-    &[theme="blue"]
-    {
-        --color: var(--light-blue);
-        --background: var(--dark-blue);
-    }
-
-    color: var(--color);
-    background-color: var(--background);
+    color: var(--light);
+    background-color: var(--dark);
 }
 
 .footer__divider
@@ -43,18 +34,18 @@ footer
 
 .footer__logo--name-space
 {
-    border-color: var(--color);
+    border-color: var(--light);
 }
 
 .footer__logo
 {   
     path
     {
-        fill: var(--background);
+        fill: var(--dark);
 
         &.logo-bg
         {
-            fill: var(--color);
+            fill: var(--light);
         }
     }
 }

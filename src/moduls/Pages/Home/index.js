@@ -1,3 +1,4 @@
+import AppendLottie from "../../Components/AppendLottie";
 import Clients from "./js/Clients";
 import Counter from "./js/Counter";
 import Insight from "./js/Insight";
@@ -13,5 +14,6 @@ export default class Page
         this.clients = new Clients()
         this.insight = new Insight()
         this.counter = new Counter()
+        this.appendLottie = new AppendLottie($('.numbers__video'), true)
     }
 }

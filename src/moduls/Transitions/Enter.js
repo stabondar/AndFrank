@@ -2,17 +2,17 @@ import gsap from 'gsap'
 
 export default class Enter
 {
-    constructor(container, pageAnimation)
+    constructor(container, pageAnimation, checkPage)
     {
-        gsap.set(container, {autoAlpha: 1})
+        const main = $(container)
         $('img').removeAttr('srcset')
-
-        $('html').removeClass('green')
-        $('html').removeClass('light-green')
-
         let loader = $('.loader')
-        let tl = gsap.timeline({defaults: {duration: 1.2, ease: 'power4'}})
-        tl.to(loader, {clipPath: 'inset(0 0 100% 0)', onStart: pageAnimation}, 0.05)
+
+        gsap.set(main, {autoAlpha: 1})
+        let tl = gsap.timeline({defaults: {duration: 0.5, ease: 'power1'}})
+        
+        tl.to(loader, {opacity: 0, onStart: () => {pageAnimation(), checkPage()}, 
+        onComplete: () => loader.removeClass('loading')}, 0.3)
 
     }
 }
