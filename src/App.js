@@ -13,16 +13,11 @@ export default class App {
         instance = this
 
         this.scroll = new Scroll()
-
-        /*
-        *   once Load
-        */
         this.nav = new Nav()
 
         /*
         *   modules for pages
         */
-
        const namespace = 'barba-page'
        
        const checkPages = async () =>
@@ -35,6 +30,10 @@ export default class App {
             this.footer = await import('./moduls/Components/Footer.js').then(module => new module.default)
             if(main.attr(namespace) == 'home') this.page = await import('./moduls/Pages/Home/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'service') this.page = await import('./moduls/Pages/Service/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'arbaiten') this.page = await import('./moduls/Pages/Works/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'arbaiten-inner') this.page = await import('./moduls/Pages/WorkInner/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'news') this.page = await import('./moduls/Pages/News/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'about') this.page = await import('./moduls/Pages/About/index.js').then(module => new module.default)
         }
 
         barba.use(barbaPrefetch)

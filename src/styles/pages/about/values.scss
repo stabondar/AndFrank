@@ -1,0 +1,39 @@
+.values__descr
+{
+    gap: calc(10 / var(--to-rem));
+    padding-bottom: calc(32 / var(--to-rem));
+    max-width: calc(446 / var(--to-rem));
+}
+
+.values__list
+{
+    padding: 0 calc(112 / var(--to-rem));
+}
+
+.values__item
+{
+    &:nth-child(odd)
+    {
+        margin-left: auto;
+    }
+
+    &:nth-child(even)
+    {
+        flex-direction: row-reverse;
+        margin-right: auto;
+        text-align: right;
+
+        .values__descr
+        {
+            ._24
+            {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.values__number
+{
+    width: calc(140 / var(--to-rem));
+}

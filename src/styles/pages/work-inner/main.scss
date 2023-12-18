@@ -1,0 +1,21 @@
+main[theme="black"]
+{
+    background-color: var(--black);
+    color: var(--white);
+
+    section:first-child
+    {
+        background-color: var(--white);
+    }
+}
+
+main[theme="white"]
+{
+    background-color: var(--white);
+    color: var(--black);
+
+    .work__logo
+    {
+        filter: invert(1);
+    }
+}

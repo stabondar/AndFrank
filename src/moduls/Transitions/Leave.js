@@ -19,6 +19,7 @@ export default class Leave
         let nav = $('.nav')
         let body = $('body')
 
+        $('.nav__tab').removeClass('w--current')
         loader.addClass('loading')
         body.removeClass('burger-open')
 

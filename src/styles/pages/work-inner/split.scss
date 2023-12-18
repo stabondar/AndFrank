@@ -1,0 +1,10 @@
+.work-split--text
+{
+    max-width: calc(557 / var(--to-rem));
+}
+
+.work-split__img
+{
+    width: calc(50% - 5 / var(--to-rem));
+    flex: none;
+}

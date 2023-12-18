@@ -24,6 +24,6 @@ export default class LargeText
 
         this.parent.css('--height', `${this.height}px`)
 
-        ScrollTrigger.refresh()
+        ScrollTrigger.update()
     }
 }

@@ -1,0 +1,25 @@
+.section
+{
+    transition: color .3s ease, background-color .3s ease;
+}
+
+main
+{
+    &[theme="white"]
+    {
+        .section
+        {
+            color: var(--black);
+            background-color: var(--white);
+        }
+    }
+
+    &[theme="black"]
+    {
+        .section
+        {
+            color: var(--white);
+            background-color: var(--black);
+        }
+    }
+}

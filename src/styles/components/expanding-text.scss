@@ -1,0 +1,5 @@
+.expanding-text
+{
+    --font: 70;
+    font-size: calc(var(--font) / var(--to-rem));
+}

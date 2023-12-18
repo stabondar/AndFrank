@@ -1,0 +1,29 @@
+.next-project
+{
+    padding: calc(17 / var(--to-rem)) 0;
+    position: relative;
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: currentColor;
+        opacity: 0.25;
+    }
+
+    &::after
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: currentColor;
+        opacity: 0.25;
+    }
+}

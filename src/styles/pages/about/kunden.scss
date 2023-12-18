@@ -1,0 +1,45 @@
+.kunden__item
+{
+    position: relative;
+
+    &:hover
+    {
+        .kunden__andfrank-parent
+        {
+            opacity: 1;
+        }   
+
+        .kunden__logo
+        {
+            opacity: 0;
+        }
+    }
+}
+
+.kunden__logo
+{
+    transition: opacity var(--ease);
+}
+
+.kunden__andfrank-parent
+{
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity var(--ease);
+    position: absolute;
+    color: #FF6600;
+
+    path.logo-bg
+    {
+        fill: currentColor;
+    }
+}
+
+.kunden__andfrank-text
+{
+    border-left: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+}

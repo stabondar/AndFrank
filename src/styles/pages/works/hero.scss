@@ -1,0 +1,13 @@
+.hero.is--arbaiten
+{
+    height: 300vh;
+    margin-bottom: -30vh;
+    // margin-bottom: calc(-50vh - var(--height));
+}
+
+.arbaiten__sticky
+{
+    position: sticky;
+    height: calc(100vh - 5.69rem);
+    top: 5.69rem;
+}

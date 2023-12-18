@@ -1,0 +1,23 @@
+.rich-text
+{
+    p
+    {
+        font-size: calc(18 / var(--to-rem));
+        line-height: 1.3;
+    }
+
+    figure.w-richtext-align-center
+    {
+        margin-top: calc(50 / var(--to-rem));
+        margin-bottom: calc(75 / var(--to-rem));
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: none;
+
+        div
+        {
+            display: block;
+        }
+    }
+}

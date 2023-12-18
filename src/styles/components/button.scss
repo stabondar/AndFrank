@@ -53,3 +53,18 @@
 {
     transition: transform var(--ease);
 }
+
+.more-btn
+{
+    &:hover
+    {
+        .btn__text
+        {
+            &::before
+            {
+                transform-origin: right;
+                transform: scaleX(0);
+            }
+        }
+    }
+}

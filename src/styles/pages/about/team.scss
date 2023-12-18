@@ -1,0 +1,17 @@
+.team__list
+{
+    padding-top: calc(250 / var(--to-rem));
+}
+
+.team__item
+{
+    &:nth-child(3n+1)
+    {
+        margin-top: calc(-250 / var(--to-rem));
+    }
+    
+    &:nth-child(3n+3)
+    {
+        margin-top: calc(-120 / var(--to-rem));
+    }
+}

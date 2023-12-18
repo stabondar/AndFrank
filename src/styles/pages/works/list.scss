@@ -1,0 +1,32 @@
+.works__list
+{
+    flex-direction: column;
+    gap: calc(10 / var(--to-rem));
+}
+
+.works__item
+{
+    width: calc(665 / var(--to-rem));
+
+    &:nth-child(even)
+    {
+        align-self: flex-end;
+    }
+
+    &:not(:first-child)
+    {
+        margin-top: calc(-125 / var(--to-rem));
+    }
+}
+
+.works__info
+{
+    padding: calc(30 / var(--to-rem)) calc(50 / var(--to-rem));
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.works__info--top
+{
+    margin-bottom: calc(7 / var(--to-rem));
+}
