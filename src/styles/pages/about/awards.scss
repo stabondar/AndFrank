@@ -1,0 +1,16 @@
+.awards__logo
+{
+    height: calc(130 / var(--to-rem));
+    width: calc(150 / var(--to-rem));
+    margin-bottom: calc(25 / var(--to-rem));
+
+    img
+    {
+        object-fit: contain;
+    }
+}
+
+.awards__title
+{
+    margin-bottom: calc(7 / var(--to-rem));
+}

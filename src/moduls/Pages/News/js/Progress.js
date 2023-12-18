@@ -15,13 +15,14 @@ export default class Progress
             this.list.css('--progress', progress)
         }
 
-        ScrollTrigger.create(
+        this.progressScroll = ScrollTrigger.create(
         {
             trigger: this.list, start: 'top center', end: 'bottom center', scrub: true,
             onUpdate: self => update(self.progress)
         })
 
         this.init()
+        this.refresh()
     }
 
     init()
@@ -30,12 +31,31 @@ export default class Progress
         {
             let self = $(el)
 
-            ScrollTrigger.create(
+            this.checkActive = ScrollTrigger.create(
             {
                 trigger: self, start: 'top center-=50', end: 'bottom center-=50',
                 onEnter: () => self.addClass('active'),
                 onLeaveBack: () => self.removeClass('active')
             })
+        })
+    }
+
+    refresh()
+    {
+        let filters = $('.news__next')
+        // let items
+
+        filters.on('click', () => 
+        {
+            setTimeout(() =>
+            {   
+                // items = $('.news__item')
+                this.progressScroll.refresh()
+                this.checkActive.kill()
+
+                this.item = $('.news__item')
+                this.init()
+            }, 400)
         })
     }
 }

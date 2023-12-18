@@ -1,0 +1,49 @@
+.page__link
+{
+    position: relative;
+
+    svg
+    {
+        transition: transform var(--ease);
+    }
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: currentColor;
+        opacity: .65;
+    }
+
+    &::after
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: currentColor;
+        opacity: 1;
+        transform-origin: left;
+        transition: transform var(--ease);
+        transform: scaleX(0);
+    }
+
+    &:hover
+    {
+        &::after
+        {
+            transform: scaleX(1);
+        }
+
+        svg
+        {
+            transform: rotate(45deg);
+        }
+    }
+}

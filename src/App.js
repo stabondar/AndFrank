@@ -33,7 +33,12 @@ export default class App {
             if(main.attr(namespace) == 'arbaiten') this.page = await import('./moduls/Pages/Works/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'arbaiten-inner') this.page = await import('./moduls/Pages/WorkInner/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'news') this.page = await import('./moduls/Pages/News/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'news-inner') this.page = await import('./moduls/Pages/NewsPost/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'about') this.page = await import('./moduls/Pages/About/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'agency') this.page = await import('./moduls/Pages/Agency/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'jobs') this.page = await import('./moduls/Pages/Jobs/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'job-post') this.page = await import('./moduls/Pages/JobPost/index.js').then(module => new module.default)
+            if(main.attr(namespace) == 'contact') this.page = await import('./moduls/Pages/Contact/index.js').then(module => new module.default)
         }
 
         barba.use(barbaPrefetch)
@@ -47,6 +52,7 @@ export default class App {
             },
             debug: true,
             timeout: 7000,
+            prevent: ({ el }) => (el.classList && el.classList.contains('prevent')) || el.closest('.prevent'),
             transitions: 
             [
                 // Once Opening

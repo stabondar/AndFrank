@@ -1,5 +1,10 @@
 .rich-text
 {
+    & > *
+    {
+        margin-top: 0 !important;
+    }
+
     p
     {
         font-size: calc(18 / var(--to-rem));
@@ -18,6 +23,79 @@
         div
         {
             display: block;
+        }
+    }
+
+    h3
+    {
+        font-size: calc(24 / var(--to-rem));
+        margin-bottom: calc(25 / var(--to-rem));
+        margin-top: calc(75 / var(--to-rem));
+    }
+
+    li, ol
+    {
+        position: relative;
+        display: inline;
+        padding-left: 3.125rem;
+    }
+
+    ul, ol
+    {
+        padding-left: 0 !important;
+        display: flex;
+        flex-direction: column;
+        gap: calc(25 / var(--to-rem));
+        margin-bottom: calc(25 / var(--to-rem));
+        margin-top: calc(25 / var(--to-rem));
+    }
+    
+    li::before
+    {
+        content: '';
+        width: calc(6 / var(--to-rem));
+        height: calc(6 / var(--to-rem));
+        position: absolute;
+        top: calc(10 / var(--to-rem));
+        left: calc(25 / var(--to-rem));
+        border-radius: 100vw;
+        background-color: var(--dark);
+        background-repeat: no-repeat;
+        background-size: contain;
+    } 
+
+    li
+    {
+        font-size: calc(18 / var(--to-rem));
+        line-height: 1.3;
+    }
+
+    a
+    {
+        position: relative;
+        color: var(--dark);
+
+        &::after
+        {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: var(--dark);
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform var(--ease);
+        }
+
+        &:hover
+        {
+            &::after
+            {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
         }
     }
 }

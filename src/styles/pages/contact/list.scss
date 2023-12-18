@@ -1,0 +1,40 @@
+.contact__item
+{
+    &:last-child
+    {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .btn__arrow--icon
+    {
+        border-color: currentColor;
+    }
+}
+
+.contact__link
+{
+    position: relative;
+
+    &::after
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform var(--ease);
+    }
+
+    &:hover
+    {
+        &::after
+        {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+}

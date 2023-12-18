@@ -15,3 +15,28 @@
         margin-top: calc(-120 / var(--to-rem));
     }
 }
+
+.team__info
+{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.team__avatar
+{
+    &:hover
+    {
+        .team__mail
+        {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+.team__mail
+{
+    transition: opacity var(--ease);
+    opacity: 0;
+    pointer-events: none;
+}

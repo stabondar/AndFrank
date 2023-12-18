@@ -1,0 +1,83 @@
+.section:has(.agency)
+{
+    position: relative;
+    z-index: 1;
+}
+
+.agency__lottie-parent
+{
+    position: sticky;
+    top: 0;
+}
+
+.agency__item
+{
+    position: sticky;
+    top: 0;
+    padding-left: calc(50 / var(--to-rem));
+    padding-right: calc(50 / var(--to-rem));
+
+    &:nth-child(2)
+    {
+        background-color: var(--dark-blue);
+        color: var(--light-blue);
+        --this-color: var(--light-blue);
+    }
+
+    &:nth-child(3)
+    {
+        background-color: var(--dark-green);
+        color: var(--light-green);
+        --this-color: var(--light-green);
+    }
+
+    &:nth-child(4)
+    {
+        background-color: var(--dark-red);
+        color: var(--light-red);
+        --this-color: var(--light-red);
+    }
+
+    .about__descr
+    {
+        color: var(--black);
+    }
+
+    .agency__item--title
+    {
+        color: var(--black);
+
+        .italic
+        {
+            color: var(--this-color);
+        }
+    }
+}
+
+.agency__lottie
+{
+    overflow: hidden;
+    
+    svg
+    {
+        animation: rotate 20s linear infinite;
+
+        path
+        {
+            fill: var(--white);
+        }
+    }
+}
+
+@keyframes rotate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}

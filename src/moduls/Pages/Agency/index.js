@@ -1,11 +1,11 @@
 import { CurrentPage } from "../../Components/CurrentPage";
-import ChangeColor from "../../Components/ChangeColor";
+import AppendLottie from "../../Components/AppendLottie";
 
 export default class index
 {
     constructor()
     {
         CurrentPage()
-        this.changeTheme = new ChangeColor()
+        this.appendLottie = new AppendLottie($('.agency__lottie'))
     }
 }

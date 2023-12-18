@@ -9,4 +9,5 @@ export const CurrentPage = () =>
 
     if(page == 'brand') dropItem.eq(0).addClass(currentClass)
     if(page == 'healthcare') dropItem.eq(1).addClass(currentClass)
+    if(page == 'about') dropItem.eq(2).addClass(currentClass)
 }

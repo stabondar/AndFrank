@@ -1,0 +1,15 @@
+.jobs__item
+{
+    &:nth-child(even)
+    {
+        flex-direction: row-reverse;
+    }
+}
+
+.jobs__info
+{
+    width: 50%;
+    background-color: var(--white);
+    color: var(--black);
+    padding: calc(50 / var(--to-rem));
+}
