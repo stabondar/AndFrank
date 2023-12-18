@@ -21,10 +21,10 @@
     }
 }
 
-footer
+footer.section
 {
-    color: var(--light);
-    background-color: var(--dark);
+    color: var(--light) !important;
+    background-color: var(--dark) !important;
 }
 
 .footer__divider
