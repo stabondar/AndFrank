@@ -10,6 +10,8 @@ export default class Slider
         this.hero = $('.hero')
         this.wrapper = this.hero.find('.hero__slider')[0]
 
+        this.hero.find('.btn').removeAttr('batch')
+
         this.progress = $('.hero__progress')
         this.botParent = $('.hero__bot')
         this.botItems = $('.hero__bot--item')

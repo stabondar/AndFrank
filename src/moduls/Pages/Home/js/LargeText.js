@@ -14,7 +14,7 @@ export default class LargeText
         ScrollTrigger.create(
         {
             trigger: this.parent, start: 'top top', end: 'bottom bottom', scrub: true,
-            animation: this.animation, onUpdate: self => this.setHeight()
+            animation: this.animation, 
         })
     }   
 
@@ -24,6 +24,6 @@ export default class LargeText
 
         this.parent.css('--height', `${this.height}px`)
 
-        ScrollTrigger.update()
+        ScrollTrigger.refresh()
     }
 }

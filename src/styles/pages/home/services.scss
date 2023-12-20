@@ -1,14 +1,8 @@
-.gallery__item--horizontal
-{
-    grid-column-start: span 2;
-    grid-row-start: span 2;
-}
-
 @media screen and (max-width: 991px) 
 {
     .container
     {
-        &:has(.gallery)
+        &:has(.h-services)
         {
             padding: 0 calc(10 / var(--to-rem));
         }

@@ -11,7 +11,7 @@ export default class Batch
 
         ScrollTrigger.batch(items,
         {
-            start: 'top 85%',
+            start: 'top 90%',
             interval: 0.2,
             onEnter: batch => { gsap.to(batch, {opacity: 1, stagger: 0.1, duration: 0.6, ease: 'power1', onStart: () => $(batch).addClass('animating'), }) }
         })

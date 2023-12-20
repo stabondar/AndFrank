@@ -11,3 +11,11 @@
     height: calc(100vh - 5.69rem);
     top: 5.69rem;
 }
+
+@media screen and (max-width: 991px) 
+{
+    .hero.is--arbaiten
+    {
+        margin-bottom: calc(-500 / var(--to-rem));
+    }
+}

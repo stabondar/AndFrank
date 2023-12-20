@@ -5,3 +5,11 @@
         padding-top: 0;
     }
 }
+
+@media screen and (max-width: 991px) 
+{
+    .news-inner
+    {
+        margin-top: calc(60 / var(--to-rem));
+    }
+}

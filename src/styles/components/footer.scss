@@ -35,6 +35,7 @@ footer.section
 .footer__logo--name-space
 {
     border-color: var(--light);
+    border-right: none;
 }
 
 .footer__logo
@@ -47,5 +48,13 @@ footer.section
         {
             fill: var(--light);
         }
+    }
+}
+
+@media screen and (max-width: 991px) 
+{
+    footer
+    {
+        margin-top: calc(140 / var(--to-rem));
     }
 }

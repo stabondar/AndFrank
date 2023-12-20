@@ -3,6 +3,7 @@ import barbaPrefetch from '@barba/prefetch'
 
 import Scroll from './moduls/Scroll.js'
 import Nav from './moduls/Nav.js'
+import Burger from './moduls/Burger.js'
 
 let instance = null
 
@@ -14,6 +15,7 @@ export default class App {
 
         this.scroll = new Scroll()
         this.nav = new Nav()
+        this.burger = new Burger()
 
         /*
         *   modules for pages
@@ -28,6 +30,7 @@ export default class App {
             this.utils = await import('./moduls/Utils.js').then(module => new module.default)
             this.batch = await import('./moduls/Components/Batch.js').then(module => new module.default)
             this.footer = await import('./moduls/Components/Footer.js').then(module => new module.default)
+            this.loadVideo = await import('./moduls/Components/LoadVideos.js').then(module => new module.default)
             if(main.attr(namespace) == 'home') this.page = await import('./moduls/Pages/Home/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'service') this.page = await import('./moduls/Pages/Service/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'arbaiten') this.page = await import('./moduls/Pages/Works/index.js').then(module => new module.default)

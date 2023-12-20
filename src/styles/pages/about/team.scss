@@ -40,3 +40,31 @@
     opacity: 0;
     pointer-events: none;
 }
+
+@media screen and (max-width: 991px) 
+{
+    .team__list
+    {
+        padding-top: calc(140 / var(--to-rem));
+        width: calc(100% + 60 / var(--to-rem));
+        margin-left: calc(-30 / var(--to-rem));
+    }
+
+    .team__item
+    {
+        &:nth-child(3n+1)
+        {
+            margin-top: inherit;
+        }
+        
+        &:nth-child(3n+3)
+        {
+            margin-top: inherit;
+        }
+
+        &:nth-child(odd)
+        {
+            margin-top: calc(-140 / var(--to-rem));
+        }
+    }
+}

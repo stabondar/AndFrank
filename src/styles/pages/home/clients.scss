@@ -37,3 +37,27 @@
         scale: 1.2;
     }
 }
+
+@media screen and (max-width: 991px) 
+{
+    .clients__item
+    {
+        height: calc(431 / var(--to-rem));
+    }
+
+    .clients__item--parent
+    {
+        width: calc((458 + var(--padding) * 2) / var(--to-rem));
+    }
+
+    .clients__arrows
+    {
+        grid-column-gap: calc(604 / var(--to-rem));
+    }
+
+    .clients__arrow
+    {
+        width: calc(32 / var(--to-rem));
+        height: calc(32 / var(--to-rem));
+    }
+}

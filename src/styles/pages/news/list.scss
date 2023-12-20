@@ -34,6 +34,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+
+    .btn
+    {
+        opacity: 1;
+    }
 }
 
 .news__date
@@ -93,4 +98,43 @@
 .news__next
 {
     color: var(--white);
+}
+
+@media screen and (max-width: 991px) 
+{
+    .news__list
+    {
+        &::before,
+        &::after
+        {
+            display: none;
+        }
+    }
+
+    .news__pagination
+    {
+        margin-top: calc(40 / var(--to-rem));
+        padding-top: calc(15 / var(--to-rem));
+    }
+
+    .container
+    {
+        &:has(.news__item)
+        {
+            padding: 0 calc(10 / var(--to-rem));
+        }
+    }
+
+    .news__thumbnail
+    {
+        height: auto;
+        width: 50%;
+    }
+
+    .news__info
+    {
+        width: 50%;
+        height: auto;
+        padding: calc(23 / var(--to-rem)) calc(30 / var(--to-rem));
+    }
 }

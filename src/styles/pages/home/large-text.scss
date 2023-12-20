@@ -3,12 +3,19 @@
     --font: 600;
     height: 250vh;
     position: relative;
-    margin-bottom: calc(-50vh - var(--height));
+    margin-bottom: calc(-50vh - 100 / var(--to-rem));
+    margin-top: calc(-250 / var(--to-rem));
 
     ._70
     {
         font-size: calc(var(--font) / var(--to-rem));
         flex: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 350vw;
+        text-align: center;
     }
 }
 
@@ -24,4 +31,18 @@
 .large-text__item
 {
     width: 100%;
+}
+
+@media screen and (max-width: 991px) 
+{
+    .large-text
+    {
+        --font: 350;
+        margin-bottom: calc(-50vh - 40 / var(--to-rem));
+
+        ._70
+        {
+            width: 380vw;
+        }
+    }
 }

@@ -9,3 +9,12 @@
         rotate: 90deg;
     }
 }
+
+@media screen and (max-width: 991px) 
+{
+    .news-inner__back
+    {
+        position: relative;
+        margin-top: calc(60 / var(--to-rem));
+    }
+}

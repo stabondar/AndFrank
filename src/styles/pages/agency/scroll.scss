@@ -81,3 +81,30 @@
         transform: rotate(360deg);
     }
 }
+
+@media screen and (max-width: 991px) 
+{
+    .agency__item
+    {
+        padding: calc(120 / var(--to-rem)) calc(40 / var(--to-rem)) calc(80 / var(--to-rem));
+
+        .about__descr
+        {
+            max-width: calc(460 / var(--to-rem));
+        }
+    }
+
+    .agency__lottie-parent
+    {
+        position: absolute;
+        height: auto;
+        top: calc(-300 / var(--to-rem));
+        right: 0;
+    }
+
+    .hero.is--agency
+    {
+        height: 100dvh;
+        padding-bottom: calc(80 / var(--to-rem));
+    }
+}

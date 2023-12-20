@@ -37,3 +37,22 @@
 {
     width: calc(140 / var(--to-rem));
 }
+
+@media screen and (max-width: 991px) 
+{
+    .values__list
+    {
+        padding: 0;
+    }
+
+    .values__descr
+    {
+        max-width: calc(280 / var(--to-rem));
+        padding-bottom: calc(20 / var(--to-rem));
+    }
+
+    .values__number
+    {
+        width: auto;
+    }
+}

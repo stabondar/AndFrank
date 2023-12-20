@@ -43,3 +43,43 @@
     border-top: 1px solid currentColor;
     border-bottom: 1px solid currentColor;
 }
+
+.kunden__list
+{
+    width: 100%;
+    flex: none;
+    padding-right: 2.43056rem;
+}
+
+.kunden__wrapper
+{
+    &:nth-child(even)
+    {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 991px) 
+{
+    .kunden__list
+    {
+        gap: calc(50 / var(--to-rem));
+        padding-right: calc(50 / var(--to-rem));
+    }
+
+    .kunden__item
+    {
+        &:hover
+        {
+            .kunden__andfrank-parent
+            {
+                opacity: 0;
+            }   
+
+            .kunden__logo
+            {
+                opacity: 1;
+            }
+        }
+    }
+}

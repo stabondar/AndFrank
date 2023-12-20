@@ -68,3 +68,11 @@
         }
     }
 }
+
+@media screen and (max-width: 991px) 
+{   
+    .more-btn
+    {
+        gap: calc(20 / var(--to-rem));
+    }
+}

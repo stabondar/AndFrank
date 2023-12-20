@@ -30,3 +30,21 @@
 {
     margin-bottom: calc(7 / var(--to-rem));
 }
+
+@media screen and (max-width: 991px) 
+{
+    .works__item
+    {
+        width: calc(339 / var(--to-rem));
+
+        &:not(:first-child)
+        {
+            margin-top: calc(-110 / var(--to-rem));
+        }
+    }
+
+    .works__info
+    {
+        padding: calc(26 / var(--to-rem)) calc(30 / var(--to-rem));
+    }
+}

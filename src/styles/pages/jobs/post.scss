@@ -13,3 +13,32 @@
     color: var(--black);
     padding: calc(50 / var(--to-rem));
 }
+
+@media screen and (max-width: 991px) 
+{
+    .jobs__list
+    {
+        width: calc(100% + 60 / var(--to-rem));
+        margin-left: calc(-30 / var(--to-rem));
+    }
+
+    .jobs__item
+    {
+        height: auto;
+    }
+
+    .job__img
+    {
+        height: calc(302 / var(--to-rem));
+        width: 50%;
+        flex: none;
+    }
+
+    .jobs__info
+    {
+        padding: calc(24 / var(--to-rem)) calc(30 / var(--to-rem));
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

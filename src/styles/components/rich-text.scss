@@ -99,3 +99,14 @@
         }
     }
 }
+
+@media screen and (max-width: 991px) 
+{
+    .rich-text
+    {
+        li::before
+        {
+            left: calc(5 / var(--to-rem));
+        } 
+    }
+}
