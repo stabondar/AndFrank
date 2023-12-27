@@ -18,3 +18,11 @@
         margin-top: calc(60 / var(--to-rem));
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .news-inner__back
+    {
+        margin-top: calc(40 / var(--to-rem));
+    }
+}

@@ -189,22 +189,45 @@
 
 @media screen and (max-width: 479px) 
 {
-    .burger__body
-    {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: calc(35 / var(--to-rem));
-    }
-
     .burger__bot
     {
         margin-top: calc(60 / var(--to-rem));
         flex-direction: column;
         flex-grow: 1;
+    }
 
-        .footer__socials
+    .burger__drop--right
+    {
+        align-self: flex-start;
+    }
+
+    .burger__drop--split
+    {
+        .burger__drop--item
         {
-            align-self: flex-start;
+            &:nth-child(1)
+            {
+                padding-top: calc(20 / var(--to-rem));
+            }
+        }
+    }
+
+    .burger__item
+    {
+        padding: calc(24 / var(--to-rem)) 0;
+    }
+
+    .burger__drop--list
+    {
+        gap: calc(20 / var(--to-rem));
+    }
+
+    .burger__title,
+    .burger__drop--item
+    {
+        ._24
+        {
+            font-size: calc(24 / var(--to-rem));
         }
     }
 }

@@ -15,5 +15,18 @@ export default class index
         {
             this.addCopy = new AddCopyText($(el))
         })
+
+        this.removePosts()
+    }
+
+    removePosts()
+    {
+        this.wrapper = $('.jobs__wrapper')
+        this.post = this.wrapper.find('.jobs__item')
+
+        if(this.post.length < 1)
+        {
+            this.wrapper.remove()
+        }
     }
 }

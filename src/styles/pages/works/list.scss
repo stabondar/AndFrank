@@ -48,3 +48,24 @@
         padding: calc(26 / var(--to-rem)) calc(30 / var(--to-rem));
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .works__list
+    {
+        flex-direction: column;
+    }
+
+    .works__item
+    {
+        &:nth-child(even)
+        {
+            align-self: stretch;
+        }
+
+        &:not(:first-child)
+        {
+            margin-top: 0px;
+        }
+    }
+}

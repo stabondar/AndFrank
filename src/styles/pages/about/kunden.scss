@@ -65,6 +65,7 @@
     {
         gap: calc(50 / var(--to-rem));
         padding-right: calc(50 / var(--to-rem));
+        width: auto;
     }
 
     .kunden__item
@@ -81,5 +82,14 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+@media screen and (max-width: 479px) 
+{
+    .kunden__rows
+    {
+        margin-top: calc(60 / var(--to-rem));
+        grid-row-gap: calc(50 / var(--to-rem));
     }
 }

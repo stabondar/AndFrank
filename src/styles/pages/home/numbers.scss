@@ -20,3 +20,14 @@
         transform: rotate(360deg);
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .numbers__item
+    {
+        ._70
+        {
+            font-size: calc(27 / var(--to-rem));
+        }
+    }
+}

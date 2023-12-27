@@ -108,3 +108,107 @@
         padding-bottom: calc(80 / var(--to-rem));
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .agency__lottie-parent
+    {
+        position: static;
+        margin-top: calc(60 / var(--to-rem));
+        margin-bottom: calc(100 / var(--to-rem));
+    }
+
+    .agency__lottie
+    {
+        width: calc(170 / var(--to-rem));
+        height: calc(170 / var(--to-rem));
+    }
+
+    .agency__item
+    {
+        padding: calc(80 / var(--to-rem)) calc(20 / var(--to-rem));
+        position: relative;
+        height: auto;
+
+        &:nth-child(2)
+        {
+            .agency__item--title
+            {
+                &::before
+                {
+                    content: '02';
+                }
+            }
+        }
+        &:nth-child(3)
+        {
+            .agency__item--title
+            {
+                &::before
+                {
+                    content: '03';
+                }
+            }
+        }
+        
+        &:nth-child(4)
+        {
+            .agency__item--title
+            {
+                &::before
+                {
+                    content: '04';
+                }
+            }
+        }
+
+        .agency__item--title
+        {
+            &::before
+            {
+                content: '01';
+                font-size: calc(90 / var(--to-rem));
+                margin-bottom: calc(20 / var(--to-rem));
+                font-family: PP Editorial New,sans-serif;
+                display: block;
+                letter-spacing: -0.03em;
+                line-height: 1.1;
+                color: var(--this-color);
+            }
+        }
+    }
+
+    .about__descr
+    {
+        margin-bottom: 0px;
+    }
+
+    .agency__split
+    {
+        display: block;
+    }
+
+    .hero
+    {
+        &.is--agency
+        {
+            height: auto;
+            padding-bottom: 0px;
+        }
+
+        .agency__title
+        {
+            &::before
+            {
+                content: '01';
+                font-size: calc(90 / var(--to-rem));
+                margin-top: calc(60 / var(--to-rem));
+                margin-bottom: calc(20 / var(--to-rem));
+                font-family: PP Editorial New,sans-serif;
+                display: block;
+                letter-spacing: -0.03em;
+                line-height: 1.1;
+            }
+        }
+    }
+}

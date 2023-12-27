@@ -82,3 +82,19 @@
         }
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .work__descr
+    {
+        padding-top: 0px;
+    }
+
+    .section
+    {
+        &:has(.work__descr)
+        {
+            padding-top: calc(60 / var(--to-rem));
+        }
+    }
+}

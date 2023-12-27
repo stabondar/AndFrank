@@ -59,7 +59,7 @@
 
 .nav__drop
 {
-    --pixel-height: 60;
+    --pixel-height: 80;
     --index: 1;
 
     height: calc((var(--pixel-height) - (var(--pixel-height) * var(--index))) / var(--to-rem));

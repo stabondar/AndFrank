@@ -19,3 +19,25 @@
         margin-bottom: calc(-500 / var(--to-rem));
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .hero.is--arbaiten
+    {
+        height: auto;
+        margin-bottom: 0px;
+        padding-left: calc(20 / var(--to-rem));
+        padding-right: calc(20 / var(--to-rem));
+    }
+
+    .arbaiten__sticky
+    {
+        height: auto;
+        position: static;
+    }
+
+    ._70.expanding-text
+    {
+        font-size: calc(30 / var(--to-rem));
+    }
+}

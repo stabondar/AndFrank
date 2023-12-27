@@ -42,3 +42,38 @@
         align-items: flex-start;
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .jobs__list
+    {
+        width: calc(100% + 40 / var(--to-rem));
+        margin-left: calc(-20 / var(--to-rem));
+        gap: calc(10 / var(--to-rem));
+    }
+
+    .jobs__item
+    {
+        flex-direction: column;
+
+        &:nth-child(even)
+        {
+            flex-direction: column;
+        }
+    }
+
+    .job__img
+    {
+        height: calc(293 / var(--to-rem));
+        width: 100%;
+        flex: none;
+    }
+
+    .jobs__info
+    {
+        padding: calc(14 / var(--to-rem)) calc(20 / var(--to-rem)) calc(20 / var(--to-rem));
+        flex-direction: column;
+        width: 100%;
+        gap: calc(40 / var(--to-rem));
+    }
+}

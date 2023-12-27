@@ -15,3 +15,15 @@
         }
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .section
+    {
+        &:has(.job-content),
+        &:has(.services)
+        {
+            padding-top: calc(40 / var(--to-rem));
+        }
+    }
+}

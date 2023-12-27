@@ -15,7 +15,7 @@ export default class AddCopyText
 
     splitIt()
     {
-        this.split = new SplitText(this.currentText, {type: 'chars', charsClass: 'char'})
+        this.split = new SplitText(this.currentText, {type: 'chars, words', charsClass: 'char'})
 
         $(this.split.chars).each((i, el) => 
         {

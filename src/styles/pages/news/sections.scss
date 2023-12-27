@@ -3,3 +3,14 @@
     background-color: var(--black);
     color: var(--white);
 }
+
+@media screen and (max-width: 479px) 
+{
+    .section
+    {
+        &:has(.news__list)
+        {
+            padding-top: calc(60 / var(--to-rem));
+        }
+    }
+}

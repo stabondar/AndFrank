@@ -61,3 +61,32 @@
         height: calc(32 / var(--to-rem));
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .clients__slider
+    {
+        flex-direction: column;
+    }
+
+    .clients__item
+    {
+        height: calc(421 / var(--to-rem));
+        scale: 1;
+        filter: blur(0px);
+    }
+
+    .clients__item--parent
+    {
+        --padding: 5;
+        width: calc((335 + var(--padding) * 2) / var(--to-rem));
+    }
+
+    .clients__arrows
+    {
+        grid-column-gap: calc(51 / var(--to-rem));
+        position: relative;
+        align-self: flex-start;
+        margin-top: calc(20 / var(--to-rem));
+    }
+}

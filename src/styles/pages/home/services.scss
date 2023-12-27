@@ -8,3 +8,14 @@
         }
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .section
+    {
+        &:has(.h-services)
+        {
+            padding-top: calc(40 / var(--to-rem));
+        }
+    }
+}

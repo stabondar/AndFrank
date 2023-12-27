@@ -68,3 +68,40 @@
         }
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .team__list
+    {
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin-left: 0px;
+        grid-row-gap: calc(10 / var(--to-rem));
+    }
+
+    .team__item
+    {
+        &:nth-child(odd)
+        {
+            margin-top: inherit;
+        }
+    }
+
+    .team__avatar
+    {
+        height: calc(380 / var(--to-rem));
+    }
+
+    .team__info
+    {
+        padding: calc(16 / var(--to-rem)) calc(20 / var(--to-rem));
+    }
+
+    .team__info-mail
+    {
+        padding-top: calc(15 / var(--to-rem));
+        margin-top: calc(6 / var(--to-rem));
+    }
+}

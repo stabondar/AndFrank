@@ -9,3 +9,18 @@
     height: 200vh;
     margin-top: -100vh;
 }
+
+@media screen and (max-width: 479px) 
+{
+    .agency-sum
+    {
+        height: auto;
+        margin-top: 0px;
+        padding-top: calc(100 / var(--to-rem));
+    }
+
+    .agency-sum__sticky
+    {
+        height: auto;
+    }
+}

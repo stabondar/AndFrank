@@ -58,3 +58,57 @@ footer.section
         margin-top: calc(140 / var(--to-rem));
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    footer
+    {
+        margin-top: calc(120 / var(--to-rem));
+    }
+
+    .footer__col
+    {
+        padding-bottom: calc(8 / var(--to-rem));
+        border-bottom: 1px solid var(--light);
+        width: 100%;
+
+        &:nth-child(even)
+        {
+            align-items: flex-end;
+        }
+    }
+
+    .footer__divider
+    {
+        display: none;
+    }
+
+    .footer__row
+    {
+        &:last-child
+        {
+            margin-top: calc(70 / var(--to-rem));
+            grid-row-gap: calc(20 / var(--to-rem));
+
+            .footer__col
+            {
+
+                &:nth-child(2)
+                {
+                    align-items: flex-start;
+                }
+
+                &:nth-child(3)
+                {
+                    align-items: flex-end;
+                }
+
+                &:nth-child(1),
+                &:nth-child(4)
+                {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

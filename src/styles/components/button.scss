@@ -76,3 +76,12 @@
         gap: calc(20 / var(--to-rem));
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .btn__arrow--icon
+    {
+        height: calc(40 / var(--to-rem));
+        width: calc(40 / var(--to-rem));
+    }
+}

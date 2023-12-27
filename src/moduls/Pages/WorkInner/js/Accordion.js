@@ -14,7 +14,11 @@ export default class Accordion
 
         this.delay = 450
         this.trigger = $('.work__descsr--more')
+        this.triggerText = this.trigger.find('._18')
         this.items = $('.work__descr--hidden')
+
+        this.textOPen = 'Mehr lesen'
+        this.textClose = 'Weniger lesen'
 
         this.init()
     }
@@ -37,11 +41,13 @@ export default class Accordion
                 this.items.removeClass('open')
                 this.trigger.removeClass('hide')
                 this.resize()
+                this.triggerText.text(this.textOPen)
             } else
             {
                 this.items.addClass('open')
                 this.trigger.addClass('hide')
                 this.resize()
+                this.triggerText.text(this.textClose)
             }
 
         })
