@@ -87,6 +87,11 @@
             left: 0;
             transform: translateY(10%);
 
+            strong
+            {
+                font-weight: 400;
+            }
+
             .char
             {
                 opacity: 0;
@@ -97,12 +102,6 @@
         .char
         {
             transition: opacity var(--ease) 0.1s;
-        }
-
-        strong
-        {
-            font-weight: 400;
-
         }
     }
 }
