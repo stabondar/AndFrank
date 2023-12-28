@@ -47,3 +47,11 @@
         }
     }
 }
+
+@media screen and (max-width: 479px) 
+{
+    .page__links
+    {
+        margin-top: calc(40 / var(--to-rem));
+    }
+}

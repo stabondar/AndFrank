@@ -13,4 +13,17 @@
             padding: 0 calc(10 / var(--to-rem));
         }
     }
+
+    .work__video
+    {
+        &.is--space-bot
+        {
+            margin-bottom: calc(10 / var(--to-rem));
+        }
+
+        &.is--space-top
+        {
+            margin-top: calc(10 / var(--to-rem));
+        }
+    }
 }

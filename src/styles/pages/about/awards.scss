@@ -1,7 +1,7 @@
 .awards__logo
 {
-    height: calc(130 / var(--to-rem));
-    width: calc(150 / var(--to-rem));
+    height: calc(180 / var(--to-rem));
+    width: calc(200 / var(--to-rem));
     margin-bottom: calc(25 / var(--to-rem));
 
     img
@@ -10,7 +10,13 @@
     }
 }
 
-.awards__title
+.awards__item
 {
-    margin-bottom: calc(7 / var(--to-rem));
+    .awards__title
+    {
+        margin-bottom: calc(7 / var(--to-rem));
+        max-width: none;
+        width: 100%;
+        text-align: center;
+    }
 }

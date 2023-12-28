@@ -1,6 +1,7 @@
 .kunden__item
 {
     position: relative;
+    flex: none;
 
     &:hover
     {
@@ -14,6 +15,8 @@
             opacity: 0;
         }
     }
+
+    max-width: calc(350 / var(--to-rem));
 }
 
 .kunden__logo
@@ -46,9 +49,10 @@
 
 .kunden__list
 {
-    width: 100%;
+    display: flex;
     flex: none;
-    padding-right: 2.43056rem;
+    padding-right: calc(80 / var(--to-rem));
+    gap: calc(80 / var(--to-rem));
 }
 
 .kunden__wrapper
@@ -68,18 +72,34 @@
         width: auto;
     }
 
+    .kunden__andfrank-parent
+    {
+        display: flex;
+    }
+    
+    .kunden__andfrank-logo
+    {
+        width: calc(82 / var(--to-rem));
+    }
+
+    .kunden__andfrank-text
+    {
+        padding: calc(4 / var(--to-rem)) calc(8 / var(--to-rem));
+    }
+
     .kunden__item
     {
+
         &:hover
         {
             .kunden__andfrank-parent
             {
-                opacity: 0;
+                opacity: 1;
             }   
 
             .kunden__logo
             {
-                opacity: 1;
+                opacity: 0;
             }
         }
     }
@@ -90,6 +110,6 @@
     .kunden__rows
     {
         margin-top: calc(60 / var(--to-rem));
-        grid-row-gap: calc(50 / var(--to-rem));
+        grid-row-gap: calc(20 / var(--to-rem));
     }
 }

@@ -1,0 +1,53 @@
+.a-slider__item
+{
+    &:not(:first-child)
+    {
+        position: absolute;
+        inset: 0;
+    }
+
+    transition: opacity var(--ease);
+    opacity: 0;
+    pointer-events: none;
+
+    &.active
+    {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.a-slider__dots
+{
+    display: flex;
+    flex-direction: row;
+    gap: calc(10 / var(--to-rem));
+    position: absolute;
+    bottom: calc(20 / var(--to-rem));
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.a-slider__dot
+{
+    width: calc(10 / var(--to-rem));
+    height: calc(10 / var(--to-rem));
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: opacity var(--ease);
+    opacity: 0.5;
+    cursor: pointer;
+
+    &.active
+    {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 479px) 
+{
+    .a-slider
+    {
+        aspect-ratio: 9 / 16;
+    }
+}

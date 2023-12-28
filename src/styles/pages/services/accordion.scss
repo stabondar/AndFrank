@@ -136,3 +136,14 @@
     color: var(--dark);
     border-color: var(--light);
 }
+
+@media screen and (max-width: 479px) 
+{
+    .services__inner--item
+    {
+        ._16
+        {
+            font-size: calc(12 / var(--to-rem));
+        }
+    }
+}

@@ -27,16 +27,15 @@ export default class Clients
         
         this.row.each((i, el) => 
         {
-            let duration = 15
-            if(i == 1) duration = 22
-            if(i == 2) duration = 20
             
             let direction = i % 2 == 0 ? -1 : 1
             
             let self = $(el)
             let list = self.children()
-
+            
             let item = list.children()
+
+            let duration = 30 + item.length
 
             let tl = gsap.timeline({repeat: -1, defaults: {ease: 'none'}})
 

@@ -1,6 +1,6 @@
 export const changeLoaderTheme = () =>
 {
-    let classes = ['dark-blue', 'dark-green', 'dark-red', 'light-blue', 'light-green', 'light-red',];
+    let classes = ['dark-blue', 'dark-green', 'dark-red'];
     let randomClass
 
     const forceRepaint = () => 

@@ -97,6 +97,16 @@
     .team__info
     {
         padding: calc(16 / var(--to-rem)) calc(20 / var(--to-rem));
+
+        ._16
+        {
+            font-size: calc(12 / var(--to-rem));
+        }
+
+        ._24:not(.italic)
+        {
+            font-size: calc(22 / var(--to-rem));
+        }
     }
 
     .team__info-mail

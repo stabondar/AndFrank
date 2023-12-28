@@ -21,10 +21,15 @@
 
 .clients__item
 {
-    height: calc(513 / var(--to-rem));
+    height: auto;
     transition: scale var(--ease), filter var(--ease);
     scale: 0.85;
     filter: blur(4px);
+}
+
+.clients__company
+{
+    margin-top: calc(40 / var(--to-rem));
 }
 
 .clients__arrow
@@ -71,7 +76,7 @@
 
     .clients__item
     {
-        height: calc(421 / var(--to-rem));
+        height: auto;
         scale: 1;
         filter: blur(0px);
     }

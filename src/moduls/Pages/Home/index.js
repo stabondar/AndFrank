@@ -16,6 +16,5 @@ export default class Page
         this.insight = new Insight()
         this.counter = new Counter()
         this.appendLottie = new AppendLottie($('.numbers__video'), true)
-        this.loadVideos = new LoadVideos()
     }
 }
