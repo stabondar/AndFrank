@@ -12,7 +12,11 @@ export default class Enter
         let tl = gsap.timeline({defaults: {duration: 0.5, ease: 'power1'}})
         
         tl.to(loader, {opacity: 0, onStart: () => {pageAnimation(), checkPage()}, 
-        onComplete: () => loader.removeClass('loading')}, 0.3)
+        onComplete: () => 
+        {
+            loader.removeClass('loading')
+            loader.addClass('hide')
+        }}, 0.3)
 
     }
 }

@@ -1,9 +1,11 @@
 import barba from '@barba/core'
 import barbaPrefetch from '@barba/prefetch'
+// import $ from "jquery";
 
 import Scroll from './moduls/Scroll.js'
 import Nav from './moduls/Nav.js'
 import Burger from './moduls/Burger.js'
+import Form from './moduls/Forms.js'
 
 let instance = null
 
@@ -20,10 +22,24 @@ export default class App {
         /*
         *   modules for pages
         */
-       const namespace = 'barba-page'
-       
-       const checkPages = async () =>
-       {   
+
+        const initTime = setInterval(() =>
+        {
+            if($ != undefined)
+            {
+                clearInterval(initTime)
+                this.init()
+            }
+
+        }, 10)
+    }
+
+    init()
+    {
+        const namespace = 'barba-page'
+
+        const checkPages = async () =>
+        {
             const main = $('main')
 
             this.title = await import('./moduls/Title.js').then(module => new module.default)
@@ -31,6 +47,8 @@ export default class App {
             this.batch = await import('./moduls/Components/Batch.js').then(module => new module.default)
             this.footer = await import('./moduls/Components/Footer.js').then(module => new module.default)
             this.loadVideo = await import('./moduls/Components/LoadVideos.js').then(module => new module.default)
+            this.form = new Form()
+
             if(main.attr(namespace) == 'home') this.page = await import('./moduls/Pages/Home/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'service') this.page = await import('./moduls/Pages/Service/index.js').then(module => new module.default)
             if(main.attr(namespace) == 'arbaiten') this.page = await import('./moduls/Pages/Works/index.js').then(module => new module.default)
@@ -48,15 +66,15 @@ export default class App {
 
         barba.init(
         {
-            schema: 
+            schema:
             {
                 prefix: 'barba',
                 namespace: 'page'
             },
-            debug: true,
+            debug: false,
             timeout: 7000,
             prevent: ({ el }) => (el.classList && el.classList.contains('prevent')) || el.closest('.prevent'),
-            transitions: 
+            transitions:
             [
                 // Once Opening
                 {
@@ -109,7 +127,7 @@ export default class App {
                 }
             ]
         })
-        
+
         barba.hooks.after(async (data) =>
         {
             const restart = await import('@finsweet/ts-utils')
@@ -120,7 +138,7 @@ export default class App {
         {
             let videos = data.next.container.querySelectorAll('video')
 
-            videos.forEach(function(video) 
+            videos.forEach(function(video)
             {
                 video.load()
             })

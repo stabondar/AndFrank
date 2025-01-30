@@ -14,6 +14,7 @@ export default class LoadVideos
             if(link != undefined && link != '')
             {
                 this.init(self, video, img, link)
+                console.log(self)
             }
 
             if(self.attr('sound') == 'true')
@@ -23,17 +24,54 @@ export default class LoadVideos
         })
     }
 
-    init(self, video, img, link)
+    async init(self, video, img, link)
     {
-        video.append(`<source src="${link}" type="video/mp4">`)
-        video[0].load()
-
-        video[0].addEventListener('canplay', () => 
+        try
         {
-            video[0].play()
-            img.css('opacity', '0')
+            await this.loadVideo(video, link)
+            await this.playVideo(video, img)
+            this.handleVideoDimensions(video, self)
+        } catch(error)
+        {
+            console.log(error)
+        }
+    }
+
+    loadVideo(video, link) 
+    {
+        return new Promise((resolve, reject) => 
+        {
+            video.append(`<source src="${link}" type="video/mp4">`)
+            video[0].load()
+            video[0].addEventListener('canplay', () => resolve())
+            video[0].addEventListener('error', (error) => reject(error))
         })
     }
+
+    playVideo(video, img) 
+    {
+        return new Promise((resolve, reject) => 
+        {
+            video[0].play().then(() => 
+            {
+                img.css('opacity', '0')
+                video[0].play()
+                resolve()
+            }).catch((error) => reject(error))
+        })
+    }
+
+    handleVideoDimensions(video, self) {
+        let width = video[0].videoWidth;
+        let height = video[0].videoHeight;
+    
+        self.css('--aspect-ratio', `${width}/${height}`);
+        self.parent().css('--aspect-ratio', `${width}/${height}`);
+    
+        if (height > width) {
+          self.parent().addClass('portrait');
+        }
+      }
 
     appendButtons(item, video)
     {
@@ -73,15 +111,22 @@ export default class LoadVideos
         item.append(div)
         let buttonText = item.find('.video__button span')
 
+        let allButtonText = this.item.find('.video__button span')
+        let allVideos = this.item.find('video')
+
         item.on('click', () => 
         {
             if(item.hasClass('playing'))
             {
-                item.removeClass('playing')
-                buttonText.text('Sound On')
-                video[0].muted = true
+                this.item.removeClass('playing')
+                allButtonText.text('Sound On')
+                allVideos.each((i, el) => $(el)[0].muted = true)
             } else
             {
+                this.item.removeClass('playing')
+                allButtonText.text('Sound On')
+                allVideos.each((i, el) => $(el)[0].muted = true)
+
                 item.addClass('playing')
                 buttonText.text('Sound Off')
                 video[0].muted = false

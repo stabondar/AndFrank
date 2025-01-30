@@ -30,7 +30,7 @@ export default class Leave
 
         scroll.start()
 
-        let tl = gsap.timeline({defaults: {duration: 0.5, ease: 'power1'}})
+        let tl = gsap.timeline({defaults: {duration: 0.5, ease: 'power1'}, onStart: () => loader.removeClass('hide')})
         tl.fromTo(loader, {opacity: 0}, {opacity: 1, onComplete: complete})
 
     }

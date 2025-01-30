@@ -188,6 +188,21 @@
         display: block;
     }
 
+    .agency-sum__title
+    {
+        &::before
+        {
+            content: '05';
+            font-size: calc(90 / var(--to-rem));
+            margin-bottom: calc(20 / var(--to-rem));
+            font-family: PP Editorial New,sans-serif;
+            display: block;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--white);
+        }
+    }
+
     .hero
     {
         &.is--agency

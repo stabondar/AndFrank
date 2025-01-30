@@ -83,7 +83,7 @@
 
     .clients__item--parent
     {
-        --padding: 5;
+        --padding: 20;
         width: calc((335 + var(--padding) * 2) / var(--to-rem));
     }
 

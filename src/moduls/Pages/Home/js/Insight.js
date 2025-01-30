@@ -6,25 +6,40 @@ export default class Insight
     {
         this.line = $('.insight__line')
 
-        this.duplicate()
-        this.animation()
+        this.line.each((i, el) =>
+        {
+            let self = $(el)
+
+            this.duplicate(self)
+            this.animation(self)
+        })
+
     }
 
-    duplicate()
+    duplicate(self)
     {
-        let items = this.line.find('.insight__row')
+        let items = self.find('.insight__row')
 
         items.each((i, el) =>
         {
-            this.line.append(el.cloneNode(true))
+            self.append(el.cloneNode(true))
         })
     }
 
-    animation()
+    animation(self)
     {
-        this.row = $('.insight__row')
+        this.row = self.find('.insight__row')
+
+        const lineWidth = this.row[0].offsetWidth;
+        let duration = Math.abs(lineWidth / 140);
+
+        if(window.innerWidth < 479)
+        {
+            duration = duration * 2
+        }
+        // let duration = this.row.children().length
 
         this.tl = gsap.timeline({repeat: -1})
-        this.tl.to(this.row, {duration: 10, xPercent: -100, ease: 'none'})
+        this.tl.to(this.row, {duration: duration, xPercent: -100, ease: 'none'})
     }
 }

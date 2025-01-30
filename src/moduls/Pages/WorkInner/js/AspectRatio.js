@@ -20,6 +20,8 @@ export default class AspectRatio
             let self = $(el)
 
             self.on('load', () => this.checkSizes(self))
+
+            setTimeout(this.checkSizes(self), 1000)
             // this.addTrigger(self)
         })
     }

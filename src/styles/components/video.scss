@@ -46,6 +46,30 @@
     }
 }
 
+.work__video
+{
+    aspect-ratio: none;
+
+    .inner-video
+    {
+        aspect-ratio: var(--aspect-ratio);
+    }
+    
+    &.portrait
+    {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+
+        .inner-video
+        {
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
 .video__button
 {
     width: calc(120 / var(--to-rem));
@@ -124,5 +148,13 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 479px) 
+{
+    .video__buttons
+    {
+        inset: 0;
     }
 }

@@ -8,7 +8,7 @@
         .kunden__andfrank-parent
         {
             opacity: 1;
-        }   
+        }
 
         .kunden__logo
         {
@@ -63,7 +63,7 @@
     }
 }
 
-@media screen and (max-width: 991px) 
+@media screen and (max-width: 991px)
 {
     .kunden__list
     {
@@ -76,7 +76,7 @@
     {
         display: flex;
     }
-    
+
     .kunden__andfrank-logo
     {
         width: calc(82 / var(--to-rem));
@@ -95,7 +95,7 @@
             .kunden__andfrank-parent
             {
                 opacity: 1;
-            }   
+            }
 
             .kunden__logo
             {
@@ -105,11 +105,11 @@
     }
 }
 
-@media screen and (max-width: 479px) 
+@media screen and (max-width: 479px)
 {
     .kunden__rows
     {
         margin-top: calc(60 / var(--to-rem));
-        grid-row-gap: calc(20 / var(--to-rem));
+        grid-row-gap: calc(0 / var(--to-rem));
     }
 }

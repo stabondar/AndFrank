@@ -14,7 +14,7 @@ export default class Title
         let mm = gsap.matchMedia()
         let isDesktop = '(min-width: 991px)'
         let isMobile = '(min-width: 480px) and (max-width: 991px)'
-        let enter = 'top 80%'
+        let enter = 'top 90%'
         let splitLine, splitWord
 
         const lineAnimation = () =>
@@ -36,11 +36,11 @@ export default class Title
                     onEnter: () => tl.play()
                 })
 
-                ScrollTrigger.create({
-                    trigger: self,
-                    start: enter,
-                    onUpdate: () => tl.play()
-                })
+                // ScrollTrigger.create({
+                //     trigger: self,
+                //     start: enter,
+                //     onUpdate: () => tl.play()
+                // })
             })
         }
         

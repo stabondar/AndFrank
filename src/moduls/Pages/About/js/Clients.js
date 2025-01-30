@@ -35,7 +35,9 @@ export default class Clients
             
             let item = list.children()
 
-            let duration = 30 + item.length
+            let duration = 25 + item.length
+
+            if(window.innerWidth < 480) duration = 15 + item.length
 
             let tl = gsap.timeline({repeat: -1, defaults: {ease: 'none'}})
 

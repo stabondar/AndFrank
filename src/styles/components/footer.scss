@@ -83,6 +83,15 @@ footer.section
         display: none;
     }
 
+    .footer__logo--name
+    {
+        ._32
+        {
+            padding-left: calc(5 / var(--to-rem));
+            padding-right: calc(5 / var(--to-rem));
+        }
+    }
+
     .footer__row
     {
         &:last-child

@@ -5,22 +5,26 @@ export default class Forms
 {
     constructor()
     {
-        let forms = $('form')
-        forms.each((i, el) =>
-        {
-            let form = $(el)
-            let btn = form.find('.btn')
 
-            btn.on('click', () => form.submit())
+        setTimeout(() => {
 
-            form.validate(
+            let forms = $('form')
+            forms.each((i, el) =>
             {
-                rules: 
+                let form = $(el)
+                let btn = form.find('.btn')
+
+                btn.on('click', () => form.submit())
+
+                form.validate(
                 {
-                    name: { required: true, minlength: 2 },
-                    phone: { required: true, number: 2 }
-                }
+                    rules:
+                    {
+                        name: { required: true, minlength: 2 },
+                        phone: { required: true, number: 2 }
+                    }
+                })
             })
-        })
+        }, 2000);
     }
 }

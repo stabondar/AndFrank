@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   base: 'https://and-frank.vercel.app/',
   plugins: [
-    eslintPlugin(), 
+    // eslintPlugin(),
     glsl()],
   server: {
     host: 'localhost',

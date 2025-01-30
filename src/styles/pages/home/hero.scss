@@ -62,3 +62,8 @@
         --progress: 1 !important;
     }
 }
+
+.hero__slider--item-mob:not(:has(source)) .video
+{
+    display: none;
+}

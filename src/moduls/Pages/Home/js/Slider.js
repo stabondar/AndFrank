@@ -89,5 +89,14 @@ export default class Slider
 
         let bgColor = this.activeBotItem.attr('this-bg')
         this.botParent.css('background-color', `var(--${bgColor})`)
+
+        this.video = $('.hero__slider--item').eq(this.index).find('video')
+
+        this.video.each((i, el) =>
+        {
+            let self = $(el)
+
+            self[0].currentTime = 0
+        })
     }
 }

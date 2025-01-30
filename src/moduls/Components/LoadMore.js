@@ -1,6 +1,8 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import LoadVideos from "../Components/LoadVideos";
+
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -17,6 +19,7 @@ export default class LoadMore
             setTimeout(() =>
             {   
                 ScrollTrigger.refresh()
+                this.loadVideo = new LoadVideos()
             }, 400)
         })
     }

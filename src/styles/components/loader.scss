@@ -1,3 +1,9 @@
+.loader.hide
+{
+    display: none !important;
+    visibility: hidden !important;
+}
+
 .loader
 {
     pointer-events: none;
@@ -15,5 +21,14 @@
     &.dark-red
     {
         background: #e25b5b;
+    }
+}
+
+@media screen and (max-width: 768px) 
+{
+    .loader.hide
+    {
+        display: none !important;
+        visibility: hidden !important;
     }
 }

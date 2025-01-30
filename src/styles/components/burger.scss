@@ -49,11 +49,12 @@
     width: 100%;
     background-color: var(--white);
     touch-action: none;
-    transition: clip-path var(--ease);
+    transition: clip-path var(--ease), visibility 0s linear 0.4s;
     pointer-events: none;
     clip-path: inset(0 0 var(--cliping) 0);
     display: block;
     touch-action: none;
+    visibility: hidden;
 
     .nav__item:first-child
     {
@@ -65,6 +66,8 @@
 {
     .burger
     {
+        transition: clip-path var(--ease), visibility 0s linear 0s;
+        visibility: visible;
         --cliping: 0%;
         pointer-events: all;
     }
