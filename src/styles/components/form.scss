@@ -1,0 +1,8 @@
+.footer__form {
+  position: relative;
+}
+.footer__form .error {
+  position: absolute;
+  top:100%;
+  color: var(--light)
+}
