@@ -9,14 +9,16 @@ export default class LargeText
     {
         this.parent = $('.large-text')
 
-        this.animation = gsap.to(this.parent, {'--font': 70})
+        this.animation = gsap.fromTo(this.parent, { '--font': 70 }, { '--font': 170 })
 
-        ScrollTrigger.create(
-        {
-            trigger: this.parent, start: 'top top', end: 'bottom bottom', scrub: true,
-            animation: this.animation, 
+        ScrollTrigger.create({
+            trigger: this.parent,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true,
+            animation: this.animation,
         })
-    }   
+    }
 
     setHeight()
     {

@@ -1,10 +1,10 @@
-import AppendLottie from "../../Components/AppendLottie";
-import LoadVideos from "../../Components/LoadVideos";
-import Clients from "./js/Clients";
-import Counter from "./js/Counter";
-import Insight from "./js/Insight";
-import LargeText from "./js/LargeText";
-import Slider from "./js/Slider";
+import AppendLottie from '../../Components/AppendLottie'
+import LoadVideos from '../../Components/LoadVideos'
+import Clients from './js/Clients'
+import Counter from './js/Counter'
+import Insight from './js/Insight'
+import LargeText from './js/LargeText'
+import Slider from './js/Slider'
 
 export default class Page
 {

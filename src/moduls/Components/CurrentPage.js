@@ -7,7 +7,8 @@ export const CurrentPage = () =>
 
     dropItem.removeClass(currentClass)
 
-    if(page == 'brand') dropItem.eq(0).addClass(currentClass)
-    if(page == 'healthcare') dropItem.eq(1).addClass(currentClass)
-    if(page == 'about') dropItem.eq(2).addClass(currentClass)
+    if (page == 'brand') dropItem.eq(0).addClass(currentClass)
+    if (page == 'healthcare') dropItem.eq(1).addClass(currentClass)
+    if (page == 'about') dropItem.eq(2).addClass(currentClass)
+    if (page == 'news') dropItem.eq(3).addClass(currentClass)
 }

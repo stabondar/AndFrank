@@ -1,13 +1,17 @@
-.large-text
-{
-    --font: 600;
+@media screen and (min-width: 992px) {
+    section:has(.large-text) {
+        margin-top: calc((50vh - 150 / var(--to-rem)) * -1);
+    }
+}
+
+.large-text {
+    --font: 70;
     height: 250vh;
     position: relative;
     margin-bottom: calc(-50vh - 100 / var(--to-rem));
     margin-top: calc(-250 / var(--to-rem));
 
-    ._70
-    {
+    ._70 {
         font-size: calc(var(--font) / var(--to-rem));
         flex: none;
         position: absolute;
@@ -19,8 +23,7 @@
     }
 }
 
-.large-text__sticky
-{
+.large-text__sticky {
     height: 100vh;
     position: sticky;
     top: 0;
@@ -28,35 +31,28 @@
     vertical-align: middle;
 }
 
-.large-text__item
-{
+.large-text__item {
     width: 100%;
 }
 
-@media screen and (max-width: 991px) 
-{
-    .large-text
-    {
+@media screen and (max-width: 991px) {
+    .large-text {
         --font: 350;
         margin-bottom: calc(-50vh - 40 / var(--to-rem));
 
-        ._70
-        {
+        ._70 {
             width: 380vw;
         }
     }
 }
 
-@media screen and (max-width: 479px) 
-{
-    .large-text
-    {
+@media screen and (max-width: 479px) {
+    .large-text {
         margin-bottom: 0;
         margin-top: 0;
         height: auto;
 
-        ._70
-        {
+        ._70 {
             width: 100%;
             text-align: left;
             font-size: calc(30 / var(--to-rem));
@@ -64,8 +60,7 @@
         }
     }
 
-    .large-text__sticky
-    {
+    .large-text__sticky {
         height: auto;
     }
 }
